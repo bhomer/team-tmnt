@@ -1,5 +1,10 @@
 <a ui-sref="main">Back to Home</a>
-<p ng-repeat="character in team.characters" dv-color="gold">{{character.name}}</p>
-<dv-append text="{{ character.name }}" append="is a filthy animal.">Jabberwocky</dv-append>
-<dv-table="teams"></dv-table>
-<div dv-table="teams" dv-table-headers="['id', 'name']">$scope.teams</div>
+<h1> {{ team.name }}</h1>
+
+<ul>
+    <li ng-repeat="character in team.characters" dv-color="gold">
+<!--        <p>{{character.name}}</p>-->
+        <dv-append text="{{ character.name }}" append="is a filthy animal.">Jabberwocky</dv-append>
+    </li>
+</ul>
+<div dv-table="team.characters" dv-table-headers="['id', 'name']"></div>

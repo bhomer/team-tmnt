@@ -8,6 +8,11 @@ angular.module('teamTmntApp')
       scope: {
              dvTable: '=',
              dvTableHeaders: '='
+      },
+      link: function (scope, element, attrs) {
+          console.log(scope);
+          console.log(element);
+          console.log(attrs);
       }
     };
   });

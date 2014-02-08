@@ -9,7 +9,7 @@ angular.module('teamTmntApp')
       link: function postLink(scope, element, attrs) {
         scope.awesomeText = attrs.text;
         scope.appendedText = attrs.append;
-        element.text('this is the dvAppend directive');
+//        element.text('this is the dvAppend directive');
       }
     };
   });
