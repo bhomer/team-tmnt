@@ -13,8 +13,14 @@ describe('Directive: dvAppend', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<dv-append></dv-append>');
-    element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the dvAppend directive');
+      element = angular.element('<dv-append text="initial text" append="appended text"></dv-           append>');
+      element = $compile(element)(scope);
+      scope.$digest();
+      expect(element.text()).toBe('initial text appended text');
   }));
 });
+
+
+//  element = angular.element('<dv-append></dv-append>');
+//    element = $compile(element)(scope);
+//    expect(element.text()).toBe('this is the dvAppend directive');
