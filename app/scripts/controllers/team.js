@@ -8,6 +8,9 @@ angular.module('teamTmntApp')
       }
       
       $scope.downloadFrogs = function() {
+          $http.get('/frogs').success(function(data) {
+              $scope.frogs = data;
+          });
           
       }
   });
