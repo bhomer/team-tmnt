@@ -32,7 +32,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // Start these browsers, currently available:
@@ -48,6 +48,16 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
+      
+//add preprocessors
+      preprocessors: {
+        'app/views/**/*.html': 'html2js',
+        'app/scripts/*.js' : 'coverage',
+        'app/scripts/**/*.js' : 'coverage',
+  },
+             
+    reporters: ['coverage', 'progress'],
+             
   });
 };
